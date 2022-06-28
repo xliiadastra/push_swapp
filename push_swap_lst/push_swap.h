@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 21:00:37 by yichoi            #+#    #+#             */
-/*   Updated: 2022/06/14 22:48:12 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/06/23 18:42:47 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,6 @@ typedef struct s_list
 	int				content;
 	struct s_list	*next;
 }	t_list;
-
-typedef struct s_stack
-{
-	int	top;
-	int	st[ST_SIZE];
-}	t_stack;
 
 void	check_integer(char *str);
 void	check_dup(t_stack *a);

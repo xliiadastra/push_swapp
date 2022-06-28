@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 21:00:37 by yichoi            #+#    #+#             */
-/*   Updated: 2022/06/14 22:48:12 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/06/23 18:55:17 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,6 @@
 # include "./libft/libft.h"
 # include "./gnl/get_next_line.h"
 # define ST_SIZE 1000
-
-typedef struct s_list
-{
-	int				content;
-	struct s_list	*next;
-}	t_list;
 
 typedef struct s_stack
 {

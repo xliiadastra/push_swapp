@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 21:02:11 by yichoi            #+#    #+#             */
-/*   Updated: 2022/06/14 23:01:28 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/06/23 18:55:08 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,19 +36,9 @@ char	*lis(char *sort, int end)
 int	main(int argc, char *argv[])
 {
 	int		i;
-//	t_stack	*a_head;
-//	t_stack	*b_head;
-//	t_list	*a;
-//	t_list	*b;
 	t_stack	a;
 	t_stack	b;
 
-//	a = malloc(sizeof(t_stack));
-//	b = malloc(sizeof(t_stack));
-//	if (!a || !b)
-//		ft_error(void);
-//	a_head = a;
-//	b_head = b;
 	i = 0;
 	if (argc < 2)
 		return (0);
@@ -57,6 +47,6 @@ int	main(int argc, char *argv[])
 	start_stack(&a, &b);
 	str_enqueue(&a, argv);
 	check_dup(&a);
-//	stack_sort(&a, &b);
+	stack_sort(&a, &b);
 	return (0);
 }
