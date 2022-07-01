@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:06:23 by yichoi            #+#    #+#             */
-/*   Updated: 2022/06/29 00:02:33 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/06/29 19:56:03 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,14 @@ static void	sort(t_stack *a, t_stack *b)
 		if (check_list[i][0] * check_list[i][1] < 0)
 			optimal_times(&check_list[i][0], &check_list[i][1], a->top, b->top);
 		check_list[i][2] = a_few_times(check_list[i][0], check_list[i][1]);
+		if (check_list[i][2] < check_list[min_stack][2])
+			min_stack = i;
 	}
+	if (check_list[min_stack][0] > 0 && check_list[min_stack][1] > 0)
+		both_rr(a, b, check_list[min_stack][0], check_list[min_stack][1]);
+	else if (check_list[min_stack][0] < 0 && check_list[min_stack][1] < 0)
+		both_rrr(a, b, check_list[min_stack][0], check_list[min_stack][1]);
+	else
 }
 
 void	stack_sort(t_stack *a, t_stack *b)

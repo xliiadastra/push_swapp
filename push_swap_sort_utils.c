@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 16:52:28 by yichoi            #+#    #+#             */
-/*   Updated: 2022/06/28 20:51:59 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/06/29 23:15:49 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,20 @@ int	put_a_few_times(t_stack *a, int b)
 	while (++i <= a->top)
 		if (a->st[i] > a->st[i - 1])
 			max = i;
-	i = 0;
 	if (max == 0 && (b < a->st[a->top] || b > a->st[0]))
 		return (0);
 	if (max != 0 && (b < a->st[max - 1] || b > a->st[max]))
-		;
+		return (min_times(a->top - max + 1, max));
+	i = 0;
+	while (++i <= a->top)
+	{
+		if (b < a->st[i - 1] && b > a->st[i])
+			return (min_times(a->top - i + 1, i));
+	}
+	if (b < a->st[a->top] && b > a->st[0])
+		return (0);
+	write(2, "Error2\n", 7);
+	return (10000);
 }
 
 int	a_few_times(int a, int b)
@@ -58,6 +67,26 @@ int	a_few_times(int a, int b)
 	else if (b < 0)
 		return (a - b);
 	return (a + b);
+}
+
+void	optimal_times(int *b_times, int *a_times, int a_top, int b_top)
+{
+	if ((*b_times) < 0)
+	{
+		if (a_few_times((*a_times), )
+		{
+			if ()
+		}
+		else if ()
+	}
+	else
+	{
+		if ()
+		{
+			if ()
+		}
+		else if ()
+	}
 }
 
 void	min_to_the_top(t_stack *a)
