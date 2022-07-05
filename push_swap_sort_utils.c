@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 16:52:28 by yichoi            #+#    #+#             */
-/*   Updated: 2022/06/29 23:15:49 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/05 20:07:02 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,23 +69,29 @@ int	a_few_times(int a, int b)
 	return (a + b);
 }
 
-void	optimal_times(int *b_times, int *a_times, int a_top, int b_top)
+void	optimal_times(int *b_ts, int *a_ts, int a_top, int b_top)
 {
-	if ((*b_times) < 0)
+	if ((*b_ts) < 0)
 	{
-		if (a_few_times((*a_times), )
+		if (a_few_times((*a_ts), (b_top + 1) + (*b_ts))
+			< a_few_times((*b_ts), -((a_top + 1) - (*a_ts))))
 		{
-			if ()
+			if ((*a_ts) - (*b_ts) > a_few_times((*a_ts), (b_top + 1) + (*b_ts)))
+				(*b_ts) = (b_top + 1) + (*b_ts);
 		}
-		else if ()
+		else if ((*a_ts) -(*b_ts) > a_few_times((*b_ts), -(a_top + 1 -(*a_ts))))
+			(*a_ts) = -((a_top + 1) - (*a_ts));
 	}
 	else
 	{
-		if ()
+		if (a_few_times((*a_ts), -((b_top + 1) - (*b_ts)))
+			< a_few_times((*b_ts), (a_top + 1) + (*a_ts)))
 		{
-			if ()
+			if ((*b_ts) -(*a_ts) > a_few_times((*a_ts), -(b_top + 1 + (*b_ts))))
+				(*b_ts) = -((b_top + 1) - (*b_ts));
 		}
-		else if ()
+		else if ((*b_ts) - (a_ts) > a_few_times((*b_ts), (a_top + 1) + (a_ts)))
+			(*a_ts) = (a_top + 1) + (*a_ts);
 	}
 }
 
