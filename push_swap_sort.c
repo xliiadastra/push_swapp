@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:06:23 by yichoi            #+#    #+#             */
-/*   Updated: 2022/06/29 19:56:03 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/05 22:12:54 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,12 +71,20 @@ static void	sort(t_stack *a, t_stack *b)
 
 void	stack_sort(t_stack *a, t_stack *b)
 {
+	int	amount;
+	int	lis[ST_SIZE + 1];
+
 	if (a->top = 2)
 		sort_3(a);
 	else if (a->top = 4)
 		sort_5(a);
 	else
 	{
+		lis_sort(a, lis, 0);
+		amount = a->top;
+		_stack(a, b, lis);
+		while (amount != a->top)
+			sort(a, b);
 	}
 	min_to_the_top(a);
 }
