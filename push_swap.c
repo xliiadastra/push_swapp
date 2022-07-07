@@ -12,27 +12,6 @@
 
 #include "push_swap.h"
 
-char	*lis(char *sort, int end)
-{
-	char	arr[5];
-	int	start;
-	int	i;
-
-	start = 0;
-	i = 0;
-	arr[0] = sort[0];
-	while (start < end)
-	{
-		if (arr[i] < sort[start])
-		{
-			i++;
-			arr[i] = sort[start];
-		}
-		start++;
-	}
-	return (arr);
-}
-
 int	main(int argc, char *argv[])
 {
 	int		i;

@@ -30,6 +30,9 @@ INCLUDES	= ./push_swap.h			\
 SRCS		=	push_swap.c					\
 				push_swap_utils.c			\
 				push_swap_sort.c			\
+				push_swap_sort_utils.c			\
+				push_swap_sort_utils2.c			\
+				push_swap_sort_lis.c			\
 				check_integer.c				\
 				str_enqueue.c				\
 				option_swap.c				\

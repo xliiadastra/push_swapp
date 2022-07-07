@@ -41,11 +41,11 @@ void	start_stack(t_stack *start1, t_stack *start2)
 int	push_swap_atoi(const char *str)
 {
 	char				sign;
-	unsigned long long	result;
+	long long			result;
 
 	result = 0;
 	sign = 1;
-	while (is_space(*str) && *str)
+	while (ft_isspace(*str) && *str)
 		str++;
 	if (*str == '-')
 		sign *= -1;

@@ -12,6 +12,10 @@
 
 #include "push_swap.h"
 
+static void     str_enqueue_str(t_stack *a, const char *str);
+static void     enqueue_number(t_stack *a, int number);
+static void     rev_arr(t_stack *a);
+
 static void	str_enqueue_str(t_stack *a, const char *str)
 {
 	char	**split;
@@ -22,7 +26,7 @@ static void	str_enqueue_str(t_stack *a, const char *str)
 	if (!split)
 		ft_error();
 	while (split[++i])
-		enueue_number(a, push_swap_atoi(str));
+		enqueue_number(a, push_swap_atoi(str));
 	split_free(split);
 }
 
@@ -58,7 +62,7 @@ void	str_enqueue(t_stack *a, char *argv[])
 		if (ft_strchr(argv[i], ' '))
 			str_enqueue_str(a, argv[i]);
 		else
-			str_enqueue_number(a, push_swap_atoi(argv[i]));
+			enqueue_number(a, push_swap_atoi(argv[i]));
 	}
 	rev_arr(a);
 }

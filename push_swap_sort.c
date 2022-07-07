@@ -12,6 +12,10 @@
 
 #include "push_swap.h"
 
+static void     sort_3(t_stack *a);
+static void     sort_5(t_stack *a, t_stack *b);
+static void     sorting(t_stack *a, t_stack *b);
+
 static void	sort_3(t_stack *a)
 {
 	int	i;
@@ -41,10 +45,10 @@ static void	sort_5(t_stack *a, t_stack *b)
 	pb(b, a);
 	sort_3(a);
 	while (b->top != -1)
-		sort(a, b);
+		sorting(a, b);
 }
 
-static void	sort(t_stack *a, t_stack *b)
+static void	sorting(t_stack *a, t_stack *b)
 {
 	int	check_list[ST_SIZE][2];
 	int	min_stack;
@@ -63,10 +67,12 @@ static void	sort(t_stack *a, t_stack *b)
 			min_stack = i;
 	}
 	if (check_list[min_stack][0] > 0 && check_list[min_stack][1] > 0)
-		both_rr(a, b, check_list[min_stack][0], check_list[min_stack][1]);
+		both_r(a, b, check_list[min_stack][1], check_list[min_stack][0]);
 	else if (check_list[min_stack][0] < 0 && check_list[min_stack][1] < 0)
-		both_rrr(a, b, check_list[min_stack][0], check_list[min_stack][1]);
+		both_rr(a, b, check_list[min_stack][1], check_list[min_stack][0]);
 	else
+		sep_move(a, b, check_list[min_stack][1], check_list[min_stack][0]);
+	pa(a, b);
 }
 
 void	stack_sort(t_stack *a, t_stack *b)
@@ -74,17 +80,17 @@ void	stack_sort(t_stack *a, t_stack *b)
 	int	amount;
 	int	lis[ST_SIZE + 1];
 
-	if (a->top = 2)
+	if (a->top == 2)
 		sort_3(a);
-	else if (a->top = 4)
-		sort_5(a);
+	else if (a->top == 4)
+		sort_5(a, b);
 	else
 	{
 		lis_sort(a, lis, 0);
 		amount = a->top;
-		_stack(a, b, lis);
+		separate_stack(a, b, lis);
 		while (amount != a->top)
-			sort(a, b);
+			sorting(a, b);
 	}
 	min_to_the_top(a);
 }

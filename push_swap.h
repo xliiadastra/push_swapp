@@ -52,4 +52,21 @@ void	swap(t_stack *sw);
 void	push(t_stack *from, t_stack *to);
 void	rotate(t_stack *s, int reverse);
 
+void    stack_sort(t_stack *a, t_stack *b);
+
+int     min_times(int a, int b);
+int     put_a_few_times(t_stack *a, int b);
+int     a_few_times(int a, int b);
+void    optimal_times(int *b_ts, int *a_ts, int a_top, int b_top);
+void    min_to_the_top(t_stack *a);
+
+void    both_r(t_stack *a, t_stack *b, int a_ts, int b_ts);
+void    both_rr(t_stack *a, t_stack *b, int a_ts, int b_ts);
+void    sep_move(t_stack *a, t_stack *b, int a_ts, int b_ts);
+void    separate_stack(t_stack *a, t_stack *b, int *lis);
+
+void	lis_sort(t_stack *a, int *lis, int i);
+void	get_lis(t_stack *a, int *result, int size, int *lis);
+int		b_search(int *dp, int a, int s, int e);
+
 #endif

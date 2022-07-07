@@ -90,7 +90,7 @@ void	optimal_times(int *b_ts, int *a_ts, int a_top, int b_top)
 			if ((*b_ts) -(*a_ts) > a_few_times((*a_ts), -(b_top + 1 + (*b_ts))))
 				(*b_ts) = -((b_top + 1) - (*b_ts));
 		}
-		else if ((*b_ts) - (a_ts) > a_few_times((*b_ts), (a_top + 1) + (a_ts)))
+		else if ((*b_ts) - (*a_ts) > a_few_times((*b_ts), (a_top + 1) + (*a_ts)))
 			(*a_ts) = (a_top + 1) + (*a_ts);
 	}
 }

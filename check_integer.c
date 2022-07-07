@@ -12,11 +12,14 @@
 
 #include "push_swap.h"
 
+static void     check_integer_str(char *str);
+static void     check_integer_number(char *str);
+
 static void	check_integer_str(char *str)
 {
 	char	**split;
 	int		i;
-	int		j;
+//	int		j;
 
 	split = ft_split(str, ' ');
 	if (!split)
@@ -36,7 +39,7 @@ static void	check_integer_number(char *str)
 	if (!(*str))
 		ft_error();
 	while (*str)
-		if (!(ft_isdigit(str++)))
+		if (!(ft_isdigit(*str++)))
 			ft_error();
 }
 

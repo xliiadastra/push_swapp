@@ -14,53 +14,53 @@
 
 void	lis_sort(t_stack *a, int *lis, int i)
 {
-	int	amount;
+	int	size;
 	int	pos;
 	int	dp[ST_SIZE];
 	int	result[ST_SIZE];
 
-	amount = 0;
+	size = 0;
 	dp[0] = a->st[0];
 	result[0] = 0;
 	while (++i <= a->top)
 	{
-		if (dp[amount] > a->st[i])
+		if (dp[size] > a->st[i])
 		{
 			dp[++size] = a->st[i];
-			pos = amount;
+			pos = size;
 		}
 		else
 		{
-			pos = b_search(dp, a->st[i], 0, amount);
-			if (pos != -1 && pos <= amount)
+			pos = b_search(dp, a->st[i], 0, size);
+			if (pos != -1 && pos <= size)
 				dp[pos] = a->st[i];
 		}
 		result[i] = pos;
 	}
-	get_lis(a, result, amount, lis);
+	get_lis(a, result, size, lis);
 }
 
-void	get_lis(t_stack *a, int *result, int amount, int *lis)
+void	get_lis(t_stack *a, int *result, int size, int *lis)
 {
 	int	i;
 
 	i = a->top + 1;
-	lis[0] = amount + 1;
-	while (amount >= 0)
+	lis[0] = size + 1;
+	while (size >= 0)
 	{
-		while (result[--i] != amount)
+		while (result[--i] != size)
 			;
 		lis[size + 1] = a->st[i];
 		--size;
 	}
 }
 
-int	b_search(int *dp, int a, int s, int m)
+int	b_search(int *dp, int a, int s, int e)
 {
 	int	mid;
 
-	mid = (s + m) / 2;
-	if (s == m)
+	mid = (s + e) / 2;
+	if (s == e)
 	{
 		if (dp[s] < a)
 			return (s);
@@ -68,7 +68,7 @@ int	b_search(int *dp, int a, int s, int m)
 			return (-1);
 	}
 	if (dp[mid] > a)
-		return (b-search(dp, a, mid + 1, e));
+		return (b_search(dp, a, mid + 1, e));
 	else
 		return (b_search(dp, a, s, mid));
 }
