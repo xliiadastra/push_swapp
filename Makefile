@@ -43,7 +43,17 @@ SRCS		=	push_swap.c					\
 				./gnl/get_next_line.c		\
 				./gnl/get_next_line_utils.c
 
-SRCS_BN		=	
+SRCS_BN		=	checker.c					\
+			checker_utils.c					\
+			checker_check_input.c				\
+			checker_option_push.c				\
+			checker_option_swap.c				\
+			checker_option_rotate.c				\
+			checker_option_reverse_rotate.c			\
+			checker_option_tool.c				\
+			checker_parse.c					\
+			checker_sort_lis.c				\
+			checker_str_enqueue.c
 
 OBJS		= $(SRCS:.c=.o)
 
