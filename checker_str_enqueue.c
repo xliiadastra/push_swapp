@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 static void     str_enqueue_str(t_stack *a, const char *str);
 static void     enqueue_number(t_stack *a, int number);
