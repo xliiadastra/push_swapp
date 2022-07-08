@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 21:02:11 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/08 17:06:43 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/09 00:30:01 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,28 @@ int	main(int argc, char *argv[])
 
 void	get_input(t_stack *a, t_stack *b)
 {
+	char	*line;
+	int	lis[ST_SIZE + 1];
+
+	line = get_next_line(0);
+	while (line)
+	{
+		ft_parse(line, a, b);
+		free(line);
+		line = 0;
+		line = get_next_line(0);
+	}
+	free(line);
+	line = 0;
+	lis_sort(a, lis, 0);
+	if (lis[0] != a->top + 1)
+		write(1, "KO\n", 3);
+	else
+		write(1, "OK\n", 3);
+}
+/*
+void	get_input(t_stack *a, t_stack *b)
+{
 	int	lis[ST_SIZE + 1];
 	char	*line;
 
@@ -40,7 +62,7 @@ void	get_input(t_stack *a, t_stack *b)
 		line = NULL;
 		while (!line)
 			line = get_next_line(0);
-		if (line && line[0] == -1)
+		if (line && !ft_strncmp(line, "^D", 2))
 			break ;
 		ft_parse(line, a, b);
 		free(line);
@@ -51,4 +73,4 @@ void	get_input(t_stack *a, t_stack *b)
 		write(1, "KO\n", 3);
 	else
 		write(1, "OK\n", 3);
-}
+}*/
