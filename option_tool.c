@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 21:01:50 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/08 16:49:07 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/08 21:21:07 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	push(t_stack *from, t_stack *to)
 		ft_error();
 	if (from->top == -1)
 		return ;
-	to->st[++to->top] = from->st[from->top--];
+	to->st[++(to->top)] = from->st[(from->top)--];
 }
 
 void	rotate(t_stack *ro, int reverse)

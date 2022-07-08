@@ -6,12 +6,11 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 21:02:11 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/08 19:03:33 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/08 22:52:23 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 int	main(int argc, char *argv[])
 {

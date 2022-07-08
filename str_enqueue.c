@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 20:04:04 by yichoi            #+#    #+#             */
-/*   Updated: 2022/05/29 21:39:36 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/08 22:19:19 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static void	rev_arr(t_stack *a)
 
 	i = -1;
 	tmp = 0;
-	while ((++i < (a->top / 2)))
+	while ((++i <= (a->top / 2)))
 	{
 		tmp = a->st[i];
 		a->st[i] = a->st[a->top - i];
