@@ -5,6 +5,10 @@ typedef struct s_stack
 	int top;
 	int st[5];
 }	t_stack;
+void    get_lis(t_stack *a, int *result, int size, int *lis);
+void    lis_sort(t_stack *a, int *lis, int i);
+int     b_search(int *dp, int a, int s, int e);
+
 
 void    lis_sort(t_stack *a, int *lis, int i)
 {
@@ -89,5 +93,5 @@ int main()
 	for (int i = 0; i < 6; i++)
 		printf("%d\n", lis[i]);
 	for (int i = 0; i < 5; i++)
-                printf("%d\n", a.st[i]);
+		printf("%d\n", a.st[i]);
 }
