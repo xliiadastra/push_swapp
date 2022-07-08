@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 21:01:50 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/05 21:18:45 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/08 16:49:07 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ void	swap(t_stack *s)
 
 void	push(t_stack *from, t_stack *to)
 {
-	int	tmp;
-
 	if (to->top + 1 >= ST_SIZE)
 		ft_error();
 	if (from->top == -1)

@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 17:51:57 by yichoi            #+#    #+#             */
-/*   Updated: 2022/06/14 22:27:02 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/08 16:49:39 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include "../libft/libft.h"
+# define BUFFER_SIZE 1024
 
 char	*get_next_line(int fd);
 char	*saving_line(int fd, char *storage);

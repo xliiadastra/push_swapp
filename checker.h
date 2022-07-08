@@ -20,7 +20,7 @@ void    check_integer(char *str);
 void    check_dup(t_stack *a);
 
 void    pa(t_stack *a, t_stack *b);
-void    pb(t_stack *b, t_stack *a);
+void    pb(t_stack *a, t_stack *b);
 void    rra(t_stack *a);
 void    rrb(t_stack *b);
 void    rrr(t_stack *a, t_stack *b);
@@ -38,6 +38,8 @@ void    ft_parse(char *s, t_stack *a, t_stack *b);
 void    ft_parse_s(char *s, t_stack *a, t_stack *b);
 void    ft_parse_p(char *s, t_stack *a, t_stack *b);
 void    ft_parse_r(char *s, t_stack *a, t_stack *b);
+
+void	stack_sort(t_stack *a, t_stack *b);
 
 void    lis_sort(t_stack *a, int *lis, int i);
 void    get_lis(t_stack *a, int *result, int size, int *lis);

@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:06:23 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/05 22:12:54 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/08 17:25:37 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ static void	sort_3(t_stack *a)
 
 static void	sort_5(t_stack *a, t_stack *b)
 {
-	pb(b, a);
-	pb(b, a);
+	pb(a, b);
+	pb(a, b);
 	sort_3(a);
 	while (b->top != -1)
 		sorting(a, b);
@@ -50,7 +50,7 @@ static void	sort_5(t_stack *a, t_stack *b)
 
 static void	sorting(t_stack *a, t_stack *b)
 {
-	int	check_list[ST_SIZE][2];
+	int	check_list[ST_SIZE][3];
 	int	min_stack;
 	int	i;
 

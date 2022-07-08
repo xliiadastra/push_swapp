@@ -6,7 +6,7 @@
 #    By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 15:18:40 by yichoi            #+#    #+#              #
-#    Updated: 2022/06/14 22:21:42 by yichoi           ###   ########.fr        #
+#    Updated: 2022/07/08 17:37:31 by yichoi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ RM			= rm
 RMFLAGS		= -f
 
 INCLUDES	= ./push_swap.h			\
-			  ./gnl/get_next_line.h
+			  ./gnl/get_next_line.h	\
+			  ./checker.h
 
 SRCS		=	push_swap.c					\
 				push_swap_utils.c			\
@@ -39,30 +40,31 @@ SRCS		=	push_swap.c					\
 				option_push.c				\
 				option_rotate.c				\
 				option_reverse_rotate.c		\
-				option_tool.c				\
-				./gnl/get_next_line.c		\
-				./gnl/get_next_line_utils.c
+				option_tool.c
 
 SRCS_BN		=	checker.c					\
-			checker_utils.c					\
-			checker_check_input.c				\
-			checker_option_push.c				\
-			checker_option_swap.c				\
-			checker_option_rotate.c				\
-			checker_option_reverse_rotate.c			\
-			checker_option_tool.c				\
-			checker_parse.c					\
-			checker_sort_lis.c				\
-			checker_str_enqueue.c
+				checker_utils.c					\
+				checker_check_integer.c				\
+				checker_option_push.c				\
+				checker_option_swap.c				\
+				checker_option_rotate.c				\
+				checker_option_reverse_rotate.c			\
+				checker_option_tool.c				\
+				checker_parse.c					\
+				checker_sort_lis.c				\
+				checker_str_enqueue.c			\
+				./gnl/get_next_line.c		\
+				./gnl/get_next_line_utils.c
 
 OBJS		= $(SRCS:.c=.o)
 
 OBJS_BONUS	= $(SRCS_BN:.c=.o)
 
-ifndef WITH_BONUS
-A_OBJS = $(OBJS) $(OBJS_BONUS)
+ifdef WITH_BONUS
+	A_OBJS = $(OBJS_BONUS)
+	NAME = $(BNS_NAME)
 else
-A_OBJS = $(OBJS)
+	A_OBJS = $(OBJS)
 endif
 
 .PHONY : all
@@ -82,7 +84,7 @@ clean :
 
 .PHONY : fclean
 fclean : clean
-	$(RM) $(RMFLAGS) $(NAME)
+	$(RM) $(RMFLAGS) $(NAME) $(BNS_NAME)
 	@make fclean -C $(LIBFT)
 
 .PHONY : re
@@ -92,4 +94,4 @@ re:
 
 .PHONY : bonus
 bonus :
-	$(MAKE) WITH_BONUS=1 all
+	$(MAKE) WITH_BONUS=1 $(BNS_NAME)
