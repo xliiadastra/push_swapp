@@ -6,15 +6,15 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:06:23 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/08 22:49:10 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/09 16:52:41 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void     sort_3(t_stack *a);
-static void     sort_5(t_stack *a, t_stack *b);
-static void     sorting(t_stack *a, t_stack *b);
+static void	sort_3(t_stack *a);
+static void	sort_5(t_stack *a, t_stack *b);
+static void	sorting(t_stack *a, t_stack *b);
 
 static void	sort_3(t_stack *a)
 {
@@ -66,6 +66,7 @@ static void	sort_3(t_stack *a)
 		sa(a);
 	}
 }*/
+
 static void	sort_5(t_stack *a, t_stack *b)
 {
 	pb(a, b);

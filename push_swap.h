@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 21:00:37 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/08 17:27:02 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/09 16:51:56 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,18 +52,18 @@ void	swap(t_stack *sw);
 void	push(t_stack *from, t_stack *to);
 void	rotate(t_stack *s, int reverse);
 
-void    stack_sort(t_stack *a, t_stack *b);
+void	stack_sort(t_stack *a, t_stack *b);
 
-int     min_times(int a, int b);
-int     put_a_few_times(t_stack *a, int b);
-int     a_few_times(int a, int b);
-void    optimal_times(int *b_ts, int *a_ts, int a_top, int b_top);
-void    min_to_the_top(t_stack *a);
+int		min_times(int a, int b);
+int		put_a_few_times(t_stack *a, int b);
+int		a_few_times(int a, int b);
+void	optimal_times(int *b_ts, int *a_ts, int a_top, int b_top);
+void	min_to_the_top(t_stack *a);
 
-void    both_r(t_stack *a, t_stack *b, int a_ts, int b_ts);
-void    both_rr(t_stack *a, t_stack *b, int a_ts, int b_ts);
-void    sep_move(t_stack *a, t_stack *b, int a_ts, int b_ts);
-void    separate_stack(t_stack *a, t_stack *b, int *lis);
+void	both_r(t_stack *a, t_stack *b, int a_ts, int b_ts);
+void	both_rr(t_stack *a, t_stack *b, int a_ts, int b_ts);
+void	sep_move(t_stack *a, t_stack *b, int a_ts, int b_ts);
+void	separate_stack(t_stack *a, t_stack *b, int *lis);
 
 void	lis_sort(t_stack *a, int *lis, int i);
 void	get_lis(t_stack *a, int *result, int size, int *lis);

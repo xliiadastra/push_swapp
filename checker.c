@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 21:02:11 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/09 16:10:37 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/09 16:48:11 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(int argc, char *argv[])
 void	get_input(t_stack *a, t_stack *b)
 {
 	char	*line;
-	int	lis[ST_SIZE + 1];
+	int		lis[ST_SIZE + 1];
 
 	line = get_next_line(0);
 	while (line)

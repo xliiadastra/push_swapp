@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_integer.c                                    :+:      :+:    :+:   */
+/*   checker_check_integer.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 18:39:32 by yichoi            #+#    #+#             */
-/*   Updated: 2022/05/29 21:55:25 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/09 16:49:44 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-static void     check_integer_str(char *str);
-static void     check_integer_number(char *str);
+static void	check_integer_str(char *str);
+static void	check_integer_number(char *str);
 
 static void	check_integer_str(char *str)
 {

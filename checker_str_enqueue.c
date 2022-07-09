@@ -6,15 +6,15 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 20:04:04 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/08 23:13:19 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/09 16:51:16 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-static void     str_enqueue_str(t_stack *a, const char *str);
-static void     enqueue_number(t_stack *a, int number);
-static void     rev_arr(t_stack *a);
+static void	str_enqueue_str(t_stack *a, const char *str);
+static void	enqueue_number(t_stack *a, int number);
+static void	rev_arr(t_stack *a);
 
 static void	str_enqueue_str(t_stack *a, const char *str)
 {
