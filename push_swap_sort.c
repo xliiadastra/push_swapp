@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 00:06:23 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/09 16:52:41 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/09 17:01:45 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,34 +38,6 @@ static void	sort_3(t_stack *a)
 		sa(a);
 	}
 }
-/*static void	sort_3(t_stack *a) // 이게 맞음.
-{
-	int	i;
-	int	j;
-	int	k;
-
-	i = a->st[2];
-	j = a->st[1];
-	k = a->st[0];
-	if ((i > j && i > k && j < k)
-		|| (i < j && j > k && i > k)
-		|| (i < j && i < k && j < k))
-		return ;
-	else if (i > j && i > k)
-	{
-		ra(a);
-		sa(a);
-	}
-	else if (i > j && i < k)
-	{
-		sa(a);
-	}
-	else
-	{
-		rra(a);
-		sa(a);
-	}
-}*/
 
 static void	sort_5(t_stack *a, t_stack *b)
 {

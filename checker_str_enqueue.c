@@ -6,7 +6,7 @@
 /*   By: yichoi <yichoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 20:04:04 by yichoi            #+#    #+#             */
-/*   Updated: 2022/07/09 16:51:16 by yichoi           ###   ########.fr       */
+/*   Updated: 2022/07/11 14:45:59 by yichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	str_enqueue_str(t_stack *a, const char *str)
 	if (!split)
 		ft_error();
 	while (split[++i])
-		enqueue_number(a, push_swap_atoi(str));
+		enqueue_number(a, push_swap_atoi(split[i]));
 	split_free(split);
 }
 
